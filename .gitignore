@@ -1,3 +1,4 @@
+# REACT ---------------------------------------------
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -21,3 +22,75 @@ web.env.production.local
 web/npm-debug.log*
 web/yarn-debug.log*
 web/yarn-error.log*
+
+# NODE ------------------------------------
+# OSX
+#
+server/.DS_Store
+
+# Xcode
+#
+server/build/
+server/*.pbxuser
+server/!default.pbxuser
+server/*.mode1v3
+server/!default.mode1v3
+server/*.mode2v3
+server/!default.mode2v3
+server/*.perspectivev3
+server/!default.perspectivev3
+server/xcuserdata
+server/*.xccheckout
+server/*.moved-aside
+server/DerivedData
+server/*.hmap
+server/*.ipa
+server/*.xcuserstate
+
+# Android/IntelliJ
+#
+server/build/
+server/.idea
+server/.gradle
+server/local.properties
+server/*.iml
+
+# node.js
+#
+server/node_modules/
+server/npm-debug.log
+server/yarn-error.log
+server/tmp/*
+server/!tmp/.gitkeep
+
+# BUCK
+server/buck-out/
+server/.buckd/
+server/*.keystore
+server/!debug.keystore
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo. Instead, use fastlane to re-generate the
+# screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/
+
+server/*/fastlane/report.xml
+server/*/fastlane/Preview.html
+server/*/fastlane/screenshots
+
+# Bundle artifact
+server/*.jsbundle
+
+# CocoaPods
+server/ios/Pods/
+
+#coverage Test Log
+server/coverage/*
+
+#env
+server/.env
+
+#orm
+server/ormconfig.json

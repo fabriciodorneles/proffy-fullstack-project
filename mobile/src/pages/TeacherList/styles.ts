@@ -3,65 +3,54 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
         flex:1,
-        backgroundColor: '#8257E5',
-        justifyContent: 'center',
-        padding: 40,
+        backgroundColor: '#f0f0f7',
     },
 
-    banner: {
-        width: '100%',
-        resizeMode: 'contain'
+    teacherList: {
+        marginTop: -40,
     },
 
-    title: {
+    searchForm: {
+        marginBottom: 24,
+    },
+
+    label: {
         fontFamily: 'Poppins_400Regular',
-        color: '#FFF',
-        fontSize: 20,
-        lineHeight: 30,
-        marginTop: 80,
+        color: '#d4c2ff',
     },
 
-    titleBold: {
-        fontFamily: 'Poppins_600SemiBold',
-    },
-
-    buttonsContainer: {
-        flexDirection: 'row',
-        marginTop: 40,
-        justifyContent: 'space-between',
-    },
-
-    button: {
-        height:150,
-        width: '48%',
-        backgroundColor: '#333',
+    input: {
+        height: 54,
+        backgroundColor: '#fff',
         borderRadius: 8,
-        padding: 24,
+        justifyContent: 'center',
+        paddingHorizontal: 16,
+        marginTop:4,
+        marginBottom:16,
+    },
+
+    inputGroup: {
+        flexDirection:'row',
         justifyContent: 'space-between'
     },
 
-    buttonPrimary: {
-        backgroundColor: '#9871f5'
+    inputBlock: {
+        width: '48%'
     },
 
-    buttonSecondary: {
-        backgroundColor: '#04d361'
+    submitButton: {
+        backgroundColor: '#04d361',
+        height:56,
+        borderRadius: 8,
+        justifyContent: 'center',
+        alignItems: 'center',
     },
 
-    buttonText: {
+    submitButtonText: {
         fontFamily: 'Archivo_700Bold',
         color: '#FFF',
-        fontSize: 20,
+        fontSize: 16,
     },
-
-    totalConnections: {
-        fontFamily: 'Poppins_400Regular',
-        color: '#d4c2ff',
-        fontSize: 12,
-        lineHeight:20,
-        maxWidth:140,
-        marginTop: 40,
-    }
 
 
 

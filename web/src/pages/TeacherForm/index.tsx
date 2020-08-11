@@ -63,10 +63,8 @@ function TeacherForm() {
                 return { ...scheduleItem, [field]: value};
             }
             return scheduleItem;
-        });
-        
+        });        
         setScheduleItems(updateScheduleItems);
-
     }
 
     return (

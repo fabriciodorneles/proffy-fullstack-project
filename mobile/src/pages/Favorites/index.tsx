@@ -1,27 +1,49 @@
-import React from 'react';
-import { View, Image, Text, TouchableOpacity } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, AsyncStorage } from 'react-native';
+import { ScrollView } from 'react-native-gesture-handler';
+
+import PageHeader from '../../components/PageHeader';
+import TeacherItem, { Teacher } from '../../components/TeacherItem';
 
 import styles from './styles';
-
-import landingImg from '../../assets/images/landing.png';
-import studyIcon from '../../assets/images/icons/study.png';
-import giveClassesIcon from '../../assets/images/icons/give-classes.png';
-import heartIcon from '../../assets/images/icons/heart.png';
-import { RectButton } from 'react-native-gesture-handler';
-import { useNavigation } from '@react-navigation/native';
+import { useFocusEffect } from '@react-navigation/native';
 
 function Favorites() {
-    const {navigate} = useNavigation();
+    const [favorites, setFavorites] = useState([]);
 
-    function handleNavigationToGiveClassesPage() {
-        navigate('GiveClasses');
+    function LoadFavorites() {
+        AsyncStorage.getItem('favorites').then(response => {
+            if(response){
+                const favoritedTeachers = JSON.parse(response);
+                setFavorites(favoritedTeachers);
+            }
+        })
     }
+
+    useFocusEffect(()=>{
+        LoadFavorites();
+    });
 
     return (
         <View style={styles.container}>
-            <Text style={styles.title}>
-                <Text style={styles.titleBold}>Favoritos</Text>                
-            </Text>
+            <PageHeader title="Meus Proffys Favoritos"/>
+
+            <ScrollView 
+                style={styles.teacherList}
+                contentContainerStyle={{
+                    paddingHorizontal:16,
+                    paddingBottom: 16,
+                }}
+            >
+                {favorites.map((teacher:Teacher) => {
+                    return (
+                        <TeacherItem 
+                            key={teacher.id} 
+                            teacher={teacher} 
+                            favorited
+                        />)
+                })}
+            </ScrollView>
         </View>
     );
 

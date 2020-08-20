@@ -1,50 +1,86 @@
-# NEXT LEVELWEEK 2 - AGOSTO 2020
-# APLICAÇÃO PROFFY
+<h1 align="center">
+    <img alt="Proffy" src=".github/logo.svg" height="100px" />
+    <br>Next Level Week #2<br/>
+    Node.js | ReactJS | React Native
+</h1>
 
-## **Sobre as Notas e Aprender a aprender**
-Compartilho aqui todas as notas que fiz durante essa semana de aprendizados intensos. São notas pessoais, que refletem o meu momento e o meu contexto.
-Estou fazendo o bootcamp Gostack da RocketSeat e dei uma pausa essa semana para fazer a NLW. Estou em um processo de **aprender a aprender** cada vez mais, e refinando a forma como faço isso.  Nessa NLW, desenvolvi esse método, assistia o video em 1,5x - 1,8x, ia copiando os trechos de codigo em intervalos pequenos. E com um caderno do lado ia anotando apenas o que achava mais relevante. Conceitos para fixar, Novos conceitos, pequenas dicas(JS, shortcuts, etc.).  
-Uma das formas que mais aprendo é escrevendo. E aqui além de escrever estou organizando o conteúdo de forma que seja entendido por outras pessoas.  
-Dentro disso uma outra metodogia que gosto muito para aprender é [Técnica de Feynman](https://www.codymclain.com/blog/effective-learning-strategy) , que bem basicamente seria definir os conceitos como se você estivesse explicando para uma criança de 8 anos. Se você consegue fazer isso você realmente entendeu um conceito.
-Utilizo isso em alguns momentos, gostaria de utilizar mais, mas é um aprendizado. Portanto se tiver alguma explicações um pouco engraçadas nas notas, é isso.
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/fabriciodorneles/proffy?style=flat-square">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/fabriciodorneles/proffy?style=flat-square">
+  <img alt="Made by Rocketseat" src="https://img.shields.io/badge/made%20by-Rocketseat-%237519C1?style=flat-square"><br/>
+
+</p>
+<p align="center">
+  <a href="#bookmark-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#boom-como-executar">Como Executar</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#memo-licença">Licença</a>
+</p>
+
+<p align="center">
+  <img alt="design do projeto" width="650px" src="./.github/design.png" />
+<p>
+
+## 🚀Sobre
+
+O **Proffy** é uma aplicação Web e Mobile feita para auxiliar na conexão entre os alunos e os professores. Logo, esta aplicação oferece aos professores a possibilidade de registrar aulas, podendo adicionar informações como a disciplina, o custo e horário e aos alunos a possibilidade de buscar pelas aulas cadastradas.
+  
+Este projeto foi idealizado pensando no **6 de agosto**, onde se comemora o **Dia Nacional dos Profissionais da Educação**.
+  
+Essa aplicação foi realizada durante a Next **Level Week #2**, projeto da [Rocketseat](https://rocketseat.com.br/).
+
+## 🛠 Tecnologias
+
+-  [Typescript](https://www.typescriptlang.org/)
+-  [Node.js](https://nodejs.org/en/)
+-  [ReactJS](https://reactjs.org/)
+-  [React Native](http://facebook.github.io/react-native/)
+-  [Expo](https://expo.io/)
+-  [Express](https://expressjs.com/)
+-  [axios](https://github.com/axios/axios)
+
+## :boom: Como Executar
+
+- ### **Pré-requisitos**
+
+  - É **necessário** possuir o **[Node.js](https://nodejs.org/en/)** instalado no computador
+  - É **necessário** possuir o **[Git](https://git-scm.com/)** instalado e configurado no computador
+  - Também, é **preciso** ter um gerenciador de pacotes seja o **[NPM](https://www.npmjs.com/)** ou **[Yarn](https://yarnpkg.com/)**.
+  - Por fim, é **essencial** ter o **[Expo](https://expo.io/)** instalado de forma global na máquina
+
+1. Faça um clone do repositório:
+
+```sh
+  $ git clone https://github.com/HigorSnt/proffy.git
+```
+
+2. Executando a Aplicação:
+
+```sh
+  # API
+  $ cd server
+  # Instalando as dependências do projeto.
+  $ yarn # ou npm install
+  # Configurando o banco de dados e criando as tabelas.
+  $ yarn knex:migrate # ou npm run knex:migrate
+
+  # Inicie a API
+  $ yarn start # ou npm start
+
+  # Aplicação web
+  $ cd web
+  # Instalando as dependências do projeto.
+  $ yarn # ou npm install
+  # Inicie a aplicação web
+  $ yarn start # ou npm start
+
+  # Aplicação mobile
+  $ cd mobile
+  # Instalando as dependências do projeto.
+  $ yarn # ou npm install
+  # Inicie a aplicação mobile
+  $ yarn start # ou npm start
+```
 
 
 
-# **1o. DIA - REACT**
-
-## **SPA ≠ MVC**
-
-- SPA - SINGLE PAGE APPLICATION (apenas os dados necessários são carregados)
-- MVC - MODEL VIEW CONTROLLER (a página é carregada inteira a cada modi fcação)
-
-## **REACT / Conceito (para fixar)**  
-Biblioteca javascript de contrução de interfaces que permite a criação de SPAs para melhorar a experiência do Usuário Final
-
-
-## **React / BROWSER vs MOBILE**
-<!-- ![image](https://drive.google.com/uc?export=view&id=1oBwH_gH2hWiIACBRu6AnKSiE1ChXZFlm) -->
-
-## **ATENÇÃO** - Para iniciar o projeto com react App
-
-- yarn create react-app ....
-- npx create-react-app ....   (diferença do hífen, já tive problema com isso
-
-### **DOM**
-É a árvore de elementos de uma página html. É um modelo em forma de objeto que representa uma página (que te dá o 'mapa' da página) com o nome/referência de todos os elementos. A DOM é pensada para ser uma interface(uma ligação) pela qual linguagens de programação possam acessar os elementos da página e manipulá-los.
-O React utiliza o R
-
-### **COMPONENTES**
-
-São funções que retornam um html. (Tb existe angular, vue, etc.). No React tudo é componente
-
-### **JSX**
-
-Sintaxe HTML dentro do Javascript
-
-### **MOBILE FIRST**
-Conceito de desenvolvimento de aplicações com responsividade. Desenvolver primeiro o layout do mobile, menor, e depois adaptar a responsividade para a tela maior do browser.
-
-### **A questão do REM(unidade)**
-- Para aplicações responsivas, podendo definir todo o tamanho da aplicação pela porcentagem.
-- Começou colocando 60% de font-size no styles Global
-- 

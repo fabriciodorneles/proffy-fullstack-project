@@ -51,7 +51,7 @@ Essa aplicação foi realizada durante a Next **Level Week #2**, projeto da [Roc
 1. Faça um clone do repositório:
 
 ```sh
-  $ git clone https://github.com/HigorSnt/proffy.git
+  $ git clone https://github.com/fabriciodorneles/proffy-fullstack-project.git
 ```
 
 2. Executando a Aplicação:
